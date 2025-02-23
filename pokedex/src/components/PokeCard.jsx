@@ -42,7 +42,7 @@ export default function PokeCard(props) {
     })[0]?.flavor_text
 
       const skillData = {
-        name: name,
+        name: move,
         description
       }
       setSkill(skillData)
@@ -103,7 +103,7 @@ export default function PokeCard(props) {
   return (
     <div className="poke-card">
       {skill && (
-        <Modal handlCloseModal={() => { setSkill(null) }}>
+        <Modal handleCloseModal={() => { setSkill(null) }}>
         <div>
           <h6>Name</h6>
           <h2 className="skill-name">{skill.name.replaceAll('-', ' ')}</h2>
