@@ -64,7 +64,7 @@ export default function PokeCard(props) {
       cache = JSON.parse(localStorage.getItem('pokedex'))
     }
 
-    if(selectedPokemon in cache) {
+    if (selectedPokemon in cache) {
       setData(cache[selectedPokemon])
       console.log('Found pokemon in cache')
       return
@@ -82,7 +82,7 @@ export default function PokeCard(props) {
         console.log('Fetched pokemon data')
         cache[selectedPokemon] = pokemonData
         localStorage.setItem('pokedex', JSON.stringify(cache))
-      } catch(err) {
+      } catch (err) {
         console.log(err.message)
       } finally {
         setLoading(false)
@@ -145,7 +145,7 @@ export default function PokeCard(props) {
           )
         })}
       </div>
-      <h3>Move</h3>
+      <h3>Moves</h3>
       <div className="pokemon-move-grid">
         {moves.map((moveObj, moveIndex) => {
            return (
