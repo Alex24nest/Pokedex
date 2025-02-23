@@ -36,7 +36,7 @@ export default function PokeCard(props) {
       setLoadingSkill(true)
       const res = await fetch(moveUrl)
       const moveData = await res.json()
-      console.log('Fetched from API',  moveData)
+      console.log('Fetched move from API', moveData)
       const description = moveData?.flavor_text_entries.filter(val => {
         return val.version_group.name == 'firered-leafgreen'
     })[0]?.flavor_text
@@ -136,7 +136,7 @@ export default function PokeCard(props) {
       <h3>Stats</h3>
       <div className="stats-card">
         {stats.map((statObj, statIndex) => {
-          const { stat, base_stat  } = statObj
+          const { stat, base_stat } = statObj
           return (
             <div key={statIndex} className="stat-item">
               <p>{stat?.name.replaceAll('-', ' ')}</p>
