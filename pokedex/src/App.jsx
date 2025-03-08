@@ -18,7 +18,7 @@ function App() {
   
   return (
     <>
-      <Header handleToggleMenu={handleToggleMenu } />
+      <Header handleToggleMenu={handleToggleMenu} />
       <SideNav 
       showSideMenu={showSideMenu} 
       selectedPokemon={selectedPokemon}
